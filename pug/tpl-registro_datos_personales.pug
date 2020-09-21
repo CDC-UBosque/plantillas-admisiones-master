@@ -1,0 +1,147 @@
+//- .component-name
+//- .component-name--variant
+//- .component-name__sub-object
+//- .component-name__sub-object--variant 
+
+extends page-templates/tpl_master.pug
+
+block title
+	title Inscripcion Registro -  Universidad El Bosque
+block contenido
+	.container
+		.row
+			.col-md-12
+				.field-inscripciones--mensaje
+					|<span>Gabriela Rodriguez</span>, ayudanos completando tu información personal 
+				.field-inscripciones--ayuda
+					|Por favor ingresa la información para seguir tu proceso de inscripción
+				.block-inscripciones.block-inscripciones--paso1
+					.progressbar
+						+simple-progress('done', 'Información Básica', '', '✓')
+						+simple-progress('', 'Educacion Media', '')
+						+simple-progress('', 'Confirmación', 'd-none')
+
+					form.block-form--paso1.col-xl-6.col-md-10
+						.field-inscripciones--title
+							|Información del Programa al que deseo Inscribirme
+						.form-row
+							+inputSelect('col-12', 'docid', 'Modalidad Académica')
+								+inputSelectoption(label='Pregrado',   value='pregrado') Pregrado
+						.form-row
+							+inputSelect('col-12', 'docid', 'Nombre del programa ')
+								+inputSelectoption(label='Diseño de Comunicación',   value='nombrepregrado') Diseño de Comuniación
+						.field-inscripciones--title
+							|Información Básica:
+						.form-row
+							+inputTextnotr('col-md-6', 'text', 'inputnombre', 'Nombre','Gabriela')
+							+inputTextnotr('col-md-6', 'text', 'inputapellido', 'Apellidos','Rodriguez')
+						.form-row
+							+inputTextnotr('col-12', 'email', 'inputEmail', 'Correo electrónico','micorreo@dominio.com')
+						.form-row
+							+inputSelectnd('col-md-5', 'docid', 'Documento de Identidad')
+								+inputSelectoption(label='cc',   value='cc') C.C.
+								+inputSelectoption(label='ti',  value='ti') T.I.
+								+inputSelectoption(label='pasaporte', value='pasaporte') Pasaporte
+							+inputText('col-7', 'number', 'inputnumid', 'Número de Documento','#')
+						.form-row
+							+inputSelectnd('col-md-6', 'lugarid', 'Lugar Expedición Documento')
+									+inputSelectoption(label='Seleccionar',   value='')
+									+inputSelectoption(label='Departamento 1',   value='d1')
+									+inputSelectoption(label='Departamento 2',  value='d1')
+							+inputSelectnd('col-md-6', 'ciudadid', '.')
+									+inputSelectoption(label='',   value='')
+									+inputSelectoption(label='Ciudad 1',   value='c1')
+									+inputSelectoption(label='Ciudad 2',  value='c2')
+						.form-row
+							+inputText('col-md-12', 'tel', 'inputtel', 'Numero de Celular','(57)')
+
+						.form-row
+							+inputText('col-md-6', 'text', 'inputdaten', 'Fecha Nacimiento','dd/mm/aa')
+							+inputText('col-md-6', 'number', 'inputedad', 'Edad','8', disabled)
+						.form-row
+							+inputSelectnd('col-md-6', 'lugarid', 'Lugar de Nacimiento')
+									+inputSelectoption(label='Seleccionar',   value='')
+									+inputSelectoption(label='Departamento 1',   value='d1')
+									+inputSelectoption(label='Departamento 2',  value='d1')
+							+inputSelectnd('col-md-6', 'ciudadid', '.')
+									+inputSelectoption(label='',   value='')
+									+inputSelectoption(label='Ciudad 1',   value='c1')
+									+inputSelectoption(label='Ciudad 2',  value='c2')
+						.form-row
+							+inputText('col-md-12', 'text', 'inputdireccion', 'Dirección Residencia','Dirección')
+							
+						button(class='btn btn-lg btn-primary btn-block mt-3' type='submit') Siguiente
+					// /.block-form--paso1
+				// /.block-inscripciones--paso1
+			// /.col-md-12
+		// /.col-md-12
+	// /.container
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+			
+
+
+
+	
+
+			
+
+	

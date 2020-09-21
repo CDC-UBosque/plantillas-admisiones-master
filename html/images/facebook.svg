@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="24px" viewBox="0 0 12 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Crear-Cuenta" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="registrarse/login" transform="translate(-1013.000000, -1085.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="facebook" transform="translate(1013.000000, 1085.000000)">
+                <path d="M9.80918257,3.985 L12,3.985 L12,0.169 C11.6220315,0.117 10.3221398,0 8.80826598,0 C5.64952921,0 3.48570952,1.987 3.48570952,5.639 L3.48570952,9 L0,9 L0,13.266 L3.48570952,13.266 L3.48570952,24 L7.75935339,24 L7.75935339,13.267 L11.1040747,13.267 L11.6350304,9.001 L7.75835347,9.001 L7.75835347,6.062 C7.75935339,4.829 8.09132572,3.985 9.80918257,3.985 L9.80918257,3.985 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

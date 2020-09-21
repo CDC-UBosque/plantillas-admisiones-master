@@ -1,0 +1,112 @@
+//- .component-name
+//- .component-name--variant
+//- .component-name__sub-object
+//- .component-name__sub-object--variant 
+
+extends page-templates/tpl_master.pug
+
+block title
+	title Inscripcion Registro nuevo Programa -  Universidad El Bosque
+block contenido
+	.container
+		.col-md-12
+			.field-inscripciones--mensaje
+				|<span>Gabriela Rodriguez</span>, finaliza tu registro de inscripción con la información de tus estudios
+			.field-inscripciones--ayuda
+				|Por favor ingresa la información para seguir tu proceso de inscripción
+			.block-inscripciones.block-inscripciones--paso4
+				.progressbar
+					+simple-progress('done', 'Información Básica', 'done', '✓')
+					+simple-progress('done', 'Educacion Media', 'done', '✓')
+					+simple-progress('done', 'Nuevo Programa', '','✓')
+					+simple-progress('', 'Confirmación', 'd-none')
+
+				form.block-form--paso4.col-xl-6.col-md-10
+					.field-inscripciones--title
+						|Programas disponibles para la inscripción:
+					.form-row
+						+inputSelectnd('col-12', 'macademica', 'Modalidad Académica')
+							+inputSelectoption(label='Seleccionar',   value='')
+							+inputSelectoption(label='Pregrado',   value='pregrado') 
+							+inputSelectoption(label='Posgrado',   value='posgrado')
+							+inputSelectoption(label='Educacion Continua',  value='educon')
+					.form-row
+						+inputSelectnd('col-12', 'namep', 'Nombre del programa ')
+							+inputSelectoption(label='',   value='')
+							+inputSelectoption(label='Programa 1',   value='p1')
+							+inputSelectoption(label='Programa 2',  value='p2')
+						
+					button(class='btn btn-lg btn-primary btn-block mt-3' type='submit') Siguiente
+				// /.block-form--paso4
+			// /.block-inscripciones--paso4
+		// /.col-md-12
+	// /.container
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+			
+
+
+
+	
+
+			
+
+	

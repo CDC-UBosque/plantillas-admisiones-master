@@ -1,0 +1,135 @@
+// -----------------------------------------------------------------------------
+// This file contains all mixins.
+// -----------------------------------------------------------------------------
+
+// position
+@mixin position ($position: relative, $coordinates: 0 0 0 0) {
+    @if type-of($position) == list {
+        $coordinates: $position;
+        $position: relative;
+    }
+
+    $top: nth($coordinates, 1);
+    $right: nth($coordinates, 2);
+    $bottom: nth($coordinates, 3);
+    $left: nth($coordinates, 4);
+
+    position: $position;
+
+    @if $top == auto {
+        top: $top;
+    }
+    @else if not(unitless($top)) {
+        top: $top;
+    }
+    @if $right == auto {
+        right: $right;
+    }
+    @else if not(unitless($right)) {
+        right: $right;
+    }
+    @if $bottom == auto {
+        bottom: $bottom;
+    }
+    @else if not(unitless($bottom)) {
+        bottom: $bottom;
+    }
+    @if $left == auto {
+        left: $left;
+    }
+    @else if not(unitless($left)) {
+        left: $left;
+    }
+}
+
+// Font
+@mixin font-set($family: false, $size: false, $colour: false, $lspacing: false,  $lh: false) {
+    @if $family {font-family: $family}
+    @if $size { font-size: $size; }
+    @if $colour { color: $colour; }
+    @if $lspacing { letter-spacing:  $lspacing; }
+    @if $lh { line-height: $lh; }
+}
+
+// Desborde Color
+@mixin color-desborde($background: false) {
+    @if $background {background: $background;}
+    position: relative;
+    &::before,
+    &::after {
+        content: "";
+        background: $background;
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: -5;
+    }
+    &::after {
+        left: auto;
+        right: 100%;
+        width: 10%;
+    }
+    &::before{
+        width: 10%;
+    }
+}
+@mixin color-bg-parts($background: false) {
+    position: relative;
+    &:before{
+        @if $background {background: $background;}
+        content: "";
+        position: absolute;
+        @include size(100%, 5%)
+        top: 0;
+        left: 0;
+    }
+}
+@mixin color-desborde-right($background: false) {
+    @if $background {background: $background;}
+    position: relative;
+    &::before,{
+        content: "";
+        background: $background;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        height: 100%;
+        width: 3000px;
+    }
+    &::after {
+        left: auto;
+        right: 100%;
+        width: 10%;
+    }
+}
+
+// Rotar
+@mixin rotar($top: false, $left: false) {
+    @if $top {top: $top;}
+    @if $left { left: $left; }
+    position: absolute;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    transform-origin: top center;
+
+}
+
+// Event
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}

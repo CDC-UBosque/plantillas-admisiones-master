@@ -1,0 +1,58 @@
+//- .component-name
+//- .component-name--variant
+//- .component-name__sub-object
+//- .component-name__sub-object--variant 
+.block-crearcuenta
+	.row
+		.field-inscripciones--h1
+			|Crear cuenta
+		.small.mb-2 Puedes crear tu cuenta con tus redes sociales, pero antes verifica que tu información personal en redes sociales tenga registrados tus nombres y apellidos completos.
+	.row
+		.block-inscripciones--social
+			.field-inscripciones--social--facebook
+				span 
+				a(href="") Crear cuenta con Facebook
+			.field-inscripciones--social--google
+				span
+				a(href="") Crear cuenta con Google
+	.row
+		+accordion("Example")
+				+accordion-item-primary("o, crea tu cuenta registrando tus datos","0ne","")
+					form(name="form_details" id="form_details").block-form--crearcuenta
+						.form-row
+							+inputText('col-12', 'email', 'form_email', 'Correo electrónico','micorreo@dominio.com')
+							.col-12 
+								.small Recuerda que tu dirección de correo se utilizará para iniciar tu sesión y te mantendrá  informado durante todo su proceso de  tu inscripción
+						.form-row
+							+inputText('col-12', 'password', 'form_password', 'Contraseña','Ingrese contraseña')
+						.form-row
+							+inputText('col-12', 'password', 'form_confirmpassword', 'Confirmar Contraseña','Ingrese contraseña')
+						.field-inscripciones--subtitle--green
+							|Información Personal
+						.form-row
+							+inputText('col-md-6', 'text', 'form_nombre', 'Nombre','Nombre')
+							+inputText('col-md-6', 'text', 'form_apellido', 'Apellidos','Apellidos')
+						.form-row
+							+inputSelectnd('col-md-5', 'form_id', 'Documento de Identidad')
+								+inputSelectoption(label='cc',   value='cc') C.C.
+								+inputSelectoption(label='ti',  value='ti') T.I.
+								+inputSelectoption(label='pasaporte', value='pasaporte') Pasaporte
+							+inputText('col-7', 'number', 'form_numid', 'Número de Documento','#')
+						.form-row
+							+inputText('col-md-12', 'number', 'form_tel', 'Numero de Celular','(57)')
+						.field-inscripciones--subtitle--green
+							|Programa al que me estoy inscribiendo
+						.form-row
+							+inputSelect('col-12', 'form_cid', 'Modalidad Académica')
+								+inputSelectoption(label='Pregrado',   value='pregrado') Pregrado
+							+inputSelect('col-12', 'form_cid', 'Nombre del programa ')
+								+inputSelectoption(label='Diseño de Comunicación',   value='nombrepregrado') Diseño de Comunicación
+						.form-row
+							.col-12.checkbox
+								input(type='checkbox' value='tyc')
+								| He leído y estoy de acuerdo con los términos de la política de tratamiento y privacidad de la información. Ver política aqui.
+						button(class='btn btn-lg btn-primary btn-block' type="submit" name="submit") Crear Cuenta
+					// /.block-form--crearcuenta
+// /.block-crearcuenta
+
+							

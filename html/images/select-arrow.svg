@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="14px" viewBox="0 0 28 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>select-arrow 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Crear-Cuenta" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="registrarse/login-check" transform="translate(-869.000000, -1176.000000)">
+            <g id="select-arrow-2" transform="translate(869.000000, 1177.000000)">
+                <g id="select-arrow">
+                    <g id="Group-4">
+                        <rect id="Rectangle" fill-opacity="0.01" fill="#FFFFFF" fill-rule="nonzero" x="0" y="1" width="28" height="11"></rect>
+                        <g id="Path-4" stroke-linejoin="round" transform="translate(2.000000, 0.000000)" stroke="#4D4D4D" stroke-width="2">
+                            <polygon id="Path-2" points="0.11375687 0 15.7900336 0 7.95189525 11.5599192"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

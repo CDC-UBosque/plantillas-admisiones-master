@@ -1,0 +1,45 @@
+
+// -----------------------------------------------------------------------------
+// This file contains custom scss
+// -----------------------------------------------------------------------------
+
+/* Header nav */
+.navbar{
+	width: 100%;
+	&.navbar-expand-md{
+		padding-top: 0;
+		transition: ease-out all 0.5s;
+		margin-top: 1rem;
+		.navbar-collapse{
+			//display: initial !important;
+			.navbar-nav{
+				flex-direction: row;
+			}
+		}
+		a{
+			padding-top:0;
+		}
+	}
+	.nav-link.closelink{
+		@include font-set('Roboto', $size-12, $color-negro-70, 1px,  1);
+		position:relative;
+		padding-right: .5rem !important;
+      	padding-left: .8rem !important;
+      	&:hover{
+      		color:$brand-color;
+      	}
+		span{
+			@include font-set('Roboto', $size-16, $color-negro-70, 1px, 1.4);
+			font-weight: 500;
+			display: inline-block;
+			padding-top: 2px;
+			position: absolute;
+			top: 0.1rem;
+			left: 0;
+		}
+	}
+}
+.ml-auto .dropdown-menu{
+	left: auto !important;
+    right: 0px;
+}

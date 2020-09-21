@@ -1,0 +1,115 @@
+//- .component-name
+//- .component-name--variant
+//- .component-name__sub-object
+//- .component-name__sub-object--variant 
+
+extends page-templates/tpl_master.pug
+
+block title
+	title Inscripcion Registro Educación Media -  Universidad El Bosque
+block contenido
+	.container
+		.col-md-12.p-md-0
+			.field-inscripciones--mensaje
+				|<span>Gabriela Rodriguez</span>, finaliza tu registro de inscripción con la información de tus estudios
+			.field-inscripciones--ayuda
+				|Por favor ingresa la información para seguir tu proceso de inscripción
+			.block-inscripciones.block-inscripciones--paso2
+				.progressbar
+					+simple-progress('done', 'Información Básica', 'done', '✓')
+					+simple-progress('done', 'Educacion Media', '', '✓')
+					+simple-progress('', 'Confirmación', 'd-none')
+
+				form.block-form--paso2.col-xl-6.col-md-10
+					.field-inscripciones--title
+						|Informacion de tu educación media:
+					.form-row
+						+inputText('col-md-12', 'text', 'inputinstitucion', 'Nombre la Institución','Institución')
+					.form-row
+						+inputText('col-md-12', 'text', 'inputinstitucion', 'Si la institución no aparece en el listado digitelo ','Institución')
+					.form-row
+						+inputSelectnd('col-md-6', 'lugarid', 'Lugar de la institución')
+								+inputSelectoption(label='Selccionar',   value='')
+								+inputSelectoption(label='Departamento 1',   value='d1')
+								+inputSelectoption(label='Departamento 2',  value='d1')
+						+inputSelectnd('col-md-6', 'ciudadid', '.')
+								+inputSelectoption(label='',   value='')
+								+inputSelectoption(label='Ciudad 1',   value='c1')
+								+inputSelectoption(label='Ciudad 2',  value='c2')
+					.form-row
+						+inputText('col-md-12', 'text', 'inputinstitucion', 'Datos Prueba Saber','Ingresar id')
+						
+					button(class='btn btn-lg btn-primary btn-block mt-3' type='submit') Siguiente
+				// /.block-form--paso2
+			// /.block-inscripciones--paso2
+		// /.col-md-12
+	// /.container
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+			
+
+
+
+	
+
+			
+
+	

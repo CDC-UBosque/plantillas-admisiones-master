@@ -1,0 +1,88 @@
+
+// -----------------------------------------------------------------------------
+// This file contains custom scss responsive.
+// -----------------------------------------------------------------------------
+
+$break-slarge: 1441px;
+$break-lmedium: 1024px;
+$break-xsmedium: 767px;
+
+
+// Small devices (576)
+@media (max-width: 576px) {
+	.p-md-0{
+		padding-left: 0;
+		padding-right: 0;
+
+	}
+	.block-footer--inscripciones--wrap>div{
+		padding-bottom: 0;
+	}
+	.block-footer--inscripciones .col3{
+		padding-bottom: 1rem;
+	}
+	.field-footer--body--whatsapp{
+		margin-bottom: 1rem;
+	}
+	body .block-inscripciones--paso4 .progressbar .bar{
+		width: 18% !important;
+	}
+}
+
+// Small devices (767px)
+@media (max-width: $break-xsmedium) {
+	.progressbar .bar{
+		width: 25% !important;
+	}
+	.block-inscripciones--social{ 
+		grid-template-columns: 1fr; 
+		grid-row-gap: 1rem; }
+
+	.block-crearcuenta .card-header button{
+		font-size: 1rem;
+	}
+	.block-inscripciones--paso4 .progressbar .bar{
+		width: 20% !important;
+	}
+}
+
+// Medium devices (1023px)
+@media (max-width: $break-lmedium) { 
+	.block-crearcuenta{
+		margin-bottom: 2rem;
+		min-height: initial;
+	}
+	.progressbar{
+		border-bottom:1px solid $color-negro-30;
+	}
+	.progressbar .bar{
+		width: 35%
+	}
+	.block-form--paso1,
+	.block-form--paso2,
+	.block-form--paso3,
+	.block-form--paso4,
+	.block-inscripciones--paso3--wrap{
+		border-radius: 0;
+		border:0;
+	}
+	.navbar.navbar-expand-lg{
+		height: 70px;
+		width: 120px;
+		padding-top:inherit;
+		margin-top: 1rem;
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	.block-inscripciones--paso4 .progressbar .bar{
+		width: 20%
+	}
+}
+
+// Large devices (1441px)
+@media (min-width: $break-slarge) {
+
+}

@@ -1,0 +1,44 @@
+
+// -----------------------------------------------------------------------------
+// This file contains custom scss
+// -----------------------------------------------------------------------------
+
+/* Forms*/
+.form-row{
+	margin-bottom:1rem;
+	label{
+		@include font-set('Roboto', $size-15, $color-negro-70, 0,  1);
+		margin-bottom: 0.3rem;
+		font-weight: 500;
+
+	}
+	label[name="."]{
+		color: $color-negro-0;
+	}
+	input{
+		@include font-set('Roboto', $size-16, $color-negro-70, 0,  1);
+		&::placeholder{
+			@include font-set('Roboto', $size-15, $color-negro-40, 0,  1.4);
+		}
+		//background: $color-negro-5;
+	}
+	select{
+		appearance: none;      
+   		background-image: url('../images/select-arrow.svg'); 
+   		background-repeat: no-repeat;
+   		background-position: right center;  
+	}
+	.checkbox{
+		@include font-set('Roboto', $size-14, $color-negro-60, 0,  1);
+		input{
+			margin-right:0.5rem;
+		}
+	}
+	.form-control:disabled, 
+	.form-control[readonly] {
+    	background-color: $color-negro-5;
+   		opacity: 1;
+   		color:$color-negro-30;
+   	}
+
+}

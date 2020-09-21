@@ -1,0 +1,126 @@
+//- .component-name
+//- .component-name--variant
+//- .component-name__sub-object
+//- .component-name__sub-object--variant 
+
+extends page-templates/tpl_master.pug
+
+block title
+	title Universidad El Bosque
+block contenido
+	.container
+		.row
+			.col-md-6
+				include  template-parts/crear_cuenta.pug
+			.col-md-6
+				include  template-parts/login.pug
+			
+			//- modal
+			div(class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" )
+				.modal-dialog.modal-dialog-centered
+					.modal-content
+						.modal-header
+							.modal-title
+								|Para continuar confirma los datos ingresados
+							button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+							span(aria-hidden="true") &times;
+						.modal-body
+							.field-inscripciones--title
+								|Resumen Información:
+							.field-inscripciones
+								label Correo Electónico: 
+								span minombre@gmail.com
+							.field-inscripciones
+								label Nombre: 
+								span Aspirante
+							.field-inscripciones
+								label Apellidos: 
+								span Apellidos Aspirante
+							.field-inscripciones
+								label Documento de identidad: 
+								span 0000000000
+							.field-inscripciones
+								label Número de Teléfono:
+								span 57 300 8989890
+							.field-inscripciones
+								label Modalidad Académica:
+								span Pregrado
+							.field-inscripciones
+								label Programa:
+								span Diseño de Comunicación
+						.modal-footer
+							button(type="button" class="btn btn-secondary" data-dismiss="modal") Cerrar
+							button(type="button" class="btn btn-primary") Aceptar
+			// /.modal
+
+			//- button modal
+			button(type="button" class="btn btn-primary mt-4" data-toggle="modal" data-target="#staticBackdrop") abrir modal
+			// /.btn modal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+			
+
+
+
+	
+
+			
+
+	

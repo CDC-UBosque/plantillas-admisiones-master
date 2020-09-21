@@ -1,0 +1,140 @@
+//- Form
+
+mixin inputText(css, type, id, label, pl, val)
+    div(class=css)
+        label(for= id)= label
+        input(class="form-control", type=type, name= id, id= id, placeholder=pl, value=val required autofocus )
+mixin inputTextnotr(css, type, id, label, pl, val)
+    div(class=css)
+        label(for= id)= label
+        input(class="form-control", type=type, name= id, id= id, placeholder=pl, value=val  autofocus disabled )
+
+mixin inputPassword(id, label, val)
+    div.row
+        label(for= id)= label
+        input(type="password", name= id, id= id, value= val,autocomplete="off")
+
+mixin inputTextfield(id, label, val)
+    div.row
+        label(for= id)= label
+        textarea(rows="5", name= id, id= id, value= val,autocomplete="false")
+
+mixin inputToggle(id, label, checked)
+    div.row
+        label(for= id)
+            input(type="checkbox", name= id, id= id, checked= checked, autocomplete="off")
+            span= label
+
+mixin inputSelect(css, id, label)
+    div(class=css)
+        label(name= label)= label
+        select(class="form-control", id= id, name= id disabled)
+            block
+mixin inputSelectnd(css, id, label)
+    div(class=css)
+        label(name= label)= label
+        select(class="form-control", id= id, name= id )
+            block
+
+mixin inputSelectoption()
+  option(selected= (attributes.value == parsedValue))&attributes(attributes)
+    if block
+        block
+
+mixin inputToggleCollection(id, label, vals, checked)
+    - var active = []
+    - if (checked!=undefined) {
+        - active = checked.split(",")
+    - }
+    fieldset
+        legend= label
+        each val in vals
+            - var isSelected = (active.indexOf(val)>-1) ? true : false
+            +inputToggle(val.replace(/\s/g,''), val, isSelected)
+
+
+//****** BOOTSTRAP 4.3  MIXINS
+
+//- accordion
+mixin accordion(id)
+    .accordion.col-12.p-0(id='accordion' + id)
+        block
+    // /.accordion
+
+//- accordion-item
+mixin accordion-item(type,title,parent,expanded)
+    -var id = title.replace(/\s+/g,"")
+    .card
+        .card-header(id='heading'+ parent )
+            button(class="field field--name-ac-title btn btn-link collapsed", type="button",  data-toggle="collapse", data-target='#collapse' + parent, aria-expanded="true", aria-controls="collapseOne")
+                = title
+        // /.card
+        unless expanded
+            .collapse(id='collapse' + parent, aria-labelledby='heading' + parent, data-parent='#accordionExample')
+                .card-body.field.field--name-ac-body
+                    block
+            // /.collapse
+        else
+            .collapse.show(id='collapse' + parent, aria-labelledby='heading' + parent, data-parent='#accordionExample')
+                .card-body.field.field--name-ac-body
+                    block
+            // /.collapse.show
+
+
+//- accordion-item-default
+mixin accordion-item-default(title,parent,expanded)
+    +accordion-item("default",title,parent,expanded)
+        block
+        
+//- accordion-item-primary
+mixin accordion-item-primary(title,parent,expanded)
+    +accordion-item("primary",title,parent,expanded)
+        block
+
+//- accordion-item-info
+mixin accordion-item-info(title,parent,expanded)
+    +accordion-item("info",title,parent,expanded)
+        block
+
+//- accordion-item-success
+mixin accordion-item-success(title,parent,expanded)
+    +accordion-item("success",title,parent,expanded)
+        block
+        
+//- accordion-item-warning
+mixin accordion-item-warning(title,parent,expanded)
+    +accordion-item("warning",title,parent,expanded)
+        block
+        
+//- accordion-item-danger
+mixin accordion-item-danger(title,parent,expanded)
+    +accordion-item("danger",title,parent,expanded)
+        block
+
+
+//- simple-card
+mixin simple-card(title, subtitle, cssbtn, urlbtn, btname, classircle, check)
+    .card
+        .card-body
+            div(class="progressbar")
+                div(class=classircle)
+                    span.label
+                        = check
+            .card-title
+                = title
+            .card-subtitle.mb-2.text-muted
+                = subtitle
+            a(class=cssbtn href=urlbtn)
+                = btname
+
+
+//- simple-progress
+mixin simple-progress(css, title, cssbar, active )
+        div(class="circle" class=css )
+            span(class="label") 
+                = active
+            span(class="title")
+                =  title
+        span(class="bar" class=cssbar)
+
+

@@ -1,0 +1,37 @@
+/* IMPORTS */
+// 1. Configuration and helpers
+@import
+  'base/variables',
+  'base/mixins',
+  'base/helpers',
+  'base/base';
+
+// 2. Bootstrap grid
+//@import
+// '../node_modules/bootstrap/scss/variables',
+// '../node_modules/bootstrap/bootstrap/scss/bootstrap-grid';
+  
+
+// 2. Vendors
+//@import
+//  'vendor/normalize';
+
+// 3. fonts
+@import
+  'base/typography';
+
+
+// 4. components
+@import
+	'components/formadmin',
+	'components/barprogress',
+	'components/headernav';
+
+// 5. layouts
+@import
+	'layouts/tpl-grid';
+
+// 6. pages
+@import
+	'pages/page',
+	'pages/responsive';

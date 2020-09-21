@@ -1,0 +1,142 @@
+//- .component-name
+//- .component-name--variant
+//- .component-name__sub-object
+//- .component-name__sub-object--variant 
+
+extends page-templates/tpl_master.pug
+
+block title
+	title Inscripcion Registro Educación Media -  Universidad El Bosque
+block contenido
+	.container
+		.col-md-12.p-md-0
+			.field-inscripciones--mensaje
+					|<span>Gabriela Rodriguez</span>,  estas a un clic de inscribirte!
+			.field-inscripciones--ayuda
+				|Por favor revisa que tu información este correcta
+			.block-inscripciones.block-inscripciones--paso3
+				.progressbar
+					+simple-progress('done', 'Información Básica', 'done', '✓')
+					+simple-progress('done', 'Educacion Media', 'done', '✓')
+					+simple-progress('done', 'Confirmación', 'd-none', '✓')
+
+				.block-inscripciones--paso3--wrap.col-xl-6.col-md-10
+					.field-inscripciones--title
+						|Resumen Información:
+					.field-inscripciones--subtitle
+						|Información personal
+					.field-inscripciones
+						label Nombre: 
+						span Aspirante
+					.field-inscripciones
+						label Apellidos: 
+						span Apellidos Aspirante
+					.field-inscripciones
+						label Correo Electónico: 
+						span minombre@gmail.com
+					.field-inscripciones
+						label Documento de identidad: 
+						span 0000000000
+					.field-inscripciones
+						label Lugar de Expedicion del domuento
+						span Bogotá
+					.field-inscripciones
+						label Número de Teléfono:
+						span 57 300 8989890
+					.field-inscripciones
+						label Lugar de nacimento:
+						span Bogotá
+					.field-inscripciones
+						label Fecha de nacimiento:
+						span 26/04/2000
+					.field-inscripciones
+						label Edad:
+						span 20
+					.field-inscripciones
+						label Direccion de Residencia:
+						span Calle 140 # 56 - 67 Int. 5 Apt. 301 
+					.field-inscripciones--subtitle.mt-3
+						|Información Educación Media
+					.field-inscripciones
+						label Nombre Institución: 
+						span  Colegio Americano
+					.field-inscripciones
+						label Ciudad Institución: 
+						span  Bogotá
+					.field-inscripciones
+						label Año de Grado:
+						span  2019
+					button(class='btn btn-lg btn-primary btn-block mt-3' type='submit') Inscribirme
+				// /.block-form--paso3
+			// /.block-inscripciones--paso3
+		// /.col-md-12
+	// /.container
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+			
+
+
+
+	
+
+			
+
+	
